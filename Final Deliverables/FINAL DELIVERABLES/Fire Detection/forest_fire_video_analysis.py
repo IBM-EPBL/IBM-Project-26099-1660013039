@@ -30,18 +30,18 @@ while(1):
   cv2.putText(frame,"predicted class = "+str(p),(100,100),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,0))
   if pred[0]==1:
     #twilio account ssid
-    account_sid='AC884624fb567ef36a607c92fc503e1ec1'
+    account_sid='AC0afda001ba5aa2b403089ca32a4c99e1'
     #twilio account authentication token
-    auth_token ='cd8a677be96596ffe67ef749c07486a0'
+    auth_token ='3e77b28531775087fc2d28baf53659f5'
     client=Client(account_sid,auth_token)
 
     message=client.messages \
     .create(
         body='Forest Fire is detected,stay alert',
         #use twilio free number
-        from_='+18563865770',
+        from_='+13465675410',
         #to number
-        to='+91 9965265228')
+        to='+91 8870822569')
     print(message.sid)
     print('Fire Detected')
     print('SMS sent!')
